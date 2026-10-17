@@ -1,0 +1,317 @@
+/* =========================================
+   TASKMATE - UNIFIED RESPONSIVE SYSTEM
+   Mobile, Tablet & Desktop Consistency
+   ========================================= */
+
+/* Large Tablets & Small Laptops (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .user-layout-body,
+    .dashboard-layout,
+    .all-tasks-layout,
+    .admin-users-layout {
+        padding: 24px 20px 48px !important;
+        gap: 20px !important;
+    }
+
+    .stats-grid,
+    .user-stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+    }
+
+    .admin-task-details-grid,
+    .admin-user-details-grid,
+    .task-details-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+}
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+    .user-layout-header,
+    .dashboard-header,
+    .all-tasks-header,
+    .admin-users-header,
+    .create-task-header,
+    .create-user-header {
+        height: 76px !important;
+        padding: 0 20px !important;
+    }
+
+    .user-layout-body,
+    .dashboard-layout,
+    .all-tasks-layout,
+    .admin-users-layout {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 20px 16px 40px !important;
+    }
+
+    /* Stacked & Flexible Sidebar on Tablet */
+    .user-layout-sidebar,
+    .dashboard-sidebar,
+    .all-tasks-sidebar,
+    .admin-users-sidebar {
+        width: 100% !important;
+        position: static !important;
+        top: auto !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 14px !important;
+        border-radius: var(--tm-radius-lg, 18px) !important;
+    }
+
+    .user-layout-label,
+    .sidebar-label,
+    .all-tasks-label,
+    .admin-users-label {
+        width: 100% !important;
+        margin: 4px 0 2px !important;
+        padding: 0 4px !important;
+    }
+
+    .user-layout-divider,
+    .sidebar-divider,
+    .admin-users-divider {
+        display: none !important;
+    }
+
+    .user-layout-item,
+    .sidebar-item,
+    .all-tasks-nav-item,
+    .admin-users-nav-item {
+        width: auto !important;
+        flex: 1 1 calc(33.333% - 8px) !important;
+        min-width: 120px !important;
+        margin-bottom: 0 !important;
+        justify-content: center !important;
+    }
+
+    .dashboard-content,
+    .all-tasks-content,
+    .admin-users-content,
+    .user-dashboard-content {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    /* Table Wrappers Scrollable */
+    .admin-users-table-wrapper,
+    .all-tasks-table-wrapper,
+    .recent-tasks-card {
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .admin-task-info-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .admin-user-info-list {
+        grid-template-columns: 1fr !important;
+    }
+
+    .admin-user-tasks-summary {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .user-layout-header,
+    .dashboard-header,
+    .all-tasks-header,
+    .admin-users-header,
+    .create-task-header,
+    .create-user-header {
+        height: 68px !important;
+        padding: 0 16px !important;
+    }
+
+    .user-brand span,
+    .dashboard-brand span,
+    .all-tasks-brand span,
+    .admin-users-brand span,
+    .create-user-brand span {
+        display: none !important;
+    }
+
+    .user-brand-icon,
+    .dashboard-logo,
+    .all-tasks-logo,
+    .admin-users-logo,
+    .create-user-logo {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 18px !important;
+    }
+
+    .user-avatar,
+    .dashboard-user .user-avatar,
+    .all-tasks-avatar,
+    .admin-users-avatar {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 14px !important;
+    }
+
+    .dashboard-user .user-info span,
+    .user-profile span {
+        display: none !important;
+    }
+
+    .user-layout-item,
+    .sidebar-item,
+    .all-tasks-nav-item,
+    .admin-users-nav-item {
+        flex: 1 1 calc(50% - 6px) !important;
+        font-size: 13px !important;
+        height: 42px !important;
+        padding: 0 10px !important;
+    }
+
+    /* Page Header Section */
+    .welcome-section,
+    .user-welcome,
+    .all-tasks-title-section,
+    .admin-users-title-section,
+    .admin-task-details-header,
+    .admin-user-details-header,
+    .task-details-header,
+    .page-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+    }
+
+    .welcome-section h1,
+    .user-welcome h1,
+    .all-tasks-title-section h1,
+    .admin-users-title-section h1,
+    .admin-task-details-header h1,
+    .admin-user-details-header h1,
+    .task-details-header h1,
+    .page-header h1 {
+        font-size: 28px !important;
+    }
+
+    .create-task-button,
+    .all-tasks-create-button,
+    .admin-users-create-button {
+        width: 100% !important;
+    }
+
+    .stats-grid,
+    .user-stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .admin-task-details-page,
+    .admin-user-details-page,
+    .create-task-container,
+    .create-user-content,
+    .task-details-page {
+        padding: 16px 14px 40px !important;
+    }
+
+    .admin-task-card,
+    .admin-user-card,
+    .create-task-card,
+    .create-user-card,
+    .task-details-card {
+        padding: 20px 16px !important;
+        border-radius: var(--tm-radius-lg, 18px) !important;
+    }
+
+    /* Task Rows */
+    .task-row,
+    .user-task-card {
+        padding: 18px 16px !important;
+        border-radius: var(--tm-radius-lg, 18px) !important;
+    }
+
+    .task-meta,
+    .user-task-meta {
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+    }
+}
+
+/* Extra Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .user-layout-item,
+    .sidebar-item,
+    .all-tasks-nav-item,
+    .admin-users-nav-item {
+        flex: 1 1 100% !important;
+    }
+
+    .admin-task-info-grid,
+    .admin-user-tasks-summary {
+        grid-template-columns: 1fr !important;
+    }
+
+    .admin-user-modal {
+        padding: 24px 16px !important;
+    }
+
+    .admin-user-modal-actions {
+        flex-direction: column !important;
+    }
+}
+
+/* =========================================
+   NEW SAAS COMPONENTS RESPONSIVE POLISH
+   ========================================= */
+
+@media (max-width: 992px) {
+    .middle-section-grid,
+    .user-dashboard-split {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+    }
+
+    .header-search-bar {
+        width: 220px !important;
+    }
+
+    .overview-content-split {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-search-bar {
+        display: none !important;
+    }
+
+    .task-hero-card {
+        flex-direction: column !important;
+        padding: 20px !important;
+        gap: 16px !important;
+    }
+
+    .task-large-icon {
+        width: 52px !important;
+        height: 52px !important;
+        min-width: 52px !important;
+        font-size: 24px !important;
+    }
+
+    .task-hero-title {
+        font-size: 22px !important;
+    }
+
+    .update-task-modal-card {
+        padding: 20px 16px !important;
+        border-radius: 20px !important;
+    }
+}

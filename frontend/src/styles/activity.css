@@ -1,0 +1,287 @@
+/* =========================================
+   TASKMATE - ACTIVITY TIMELINE CSS
+   Apple Style Cinematic Glass UI
+   ========================================= */
+
+.activity-page {
+    width: 100%;
+}
+
+.activity-title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 28px;
+    gap: 20px;
+}
+
+.activity-title-section h1 {
+    margin: 12px 0 6px;
+    font-size: clamp(32px, 3.5vw, 48px);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+.activity-title-section h1 span {
+    color: var(--tm-blue-light, #60a5fa);
+}
+
+.activity-title-section p {
+    margin: 0;
+    color: var(--tm-text-secondary, #94a3b8);
+    font-size: 15px;
+}
+
+/* Activity Stats Strip */
+.activity-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.activity-stat-card {
+    padding: 18px 20px;
+    border-radius: var(--tm-radius-lg, 18px);
+    background: var(--tm-bg-card, rgba(14, 25, 46, 0.72));
+    border: 1px solid var(--tm-border-glass, rgba(148, 163, 184, 0.13));
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.activity-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.activity-stat-icon.blue {
+    background: rgba(37, 99, 235, 0.15);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: #60a5fa;
+}
+
+.activity-stat-icon.green {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #10b981;
+}
+
+.activity-stat-icon.orange {
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #f59e0b;
+}
+
+.activity-stat-icon.purple {
+    background: rgba(168, 85, 247, 0.15);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    color: #c084fc;
+}
+
+.activity-stat-info span {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--tm-text-muted, #64748b);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.activity-stat-info strong {
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+/* Activity Card Container */
+.activity-card {
+    padding: 28px;
+    border-radius: var(--tm-radius-xl, 24px);
+    background: var(--tm-bg-card, rgba(14, 25, 46, 0.72));
+    border: 1px solid var(--tm-border-glass, rgba(148, 163, 184, 0.13));
+    backdrop-filter: blur(24px);
+    box-shadow: var(--tm-shadow-card, 0 20px 50px rgba(0, 0, 0, 0.28));
+}
+
+.activity-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.activity-card-header h2 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+}
+
+.activity-card-header p {
+    margin: 4px 0 0;
+    color: var(--tm-text-secondary, #94a3b8);
+    font-size: 13px;
+}
+
+/* Filter Pills */
+.activity-filter-tabs {
+    display: flex;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.activity-filter-btn {
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: var(--tm-text-secondary, #94a3b8);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.activity-filter-btn:hover {
+    color: #ffffff;
+}
+
+.activity-filter-btn.active {
+    background: rgba(37, 99, 235, 0.25);
+    color: #93c5fd;
+    border: 1px solid rgba(96, 165, 250, 0.35);
+}
+
+/* Timeline Stream */
+.activity-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 20px;
+    border-radius: var(--tm-radius-md, 14px);
+    background: rgba(2, 8, 23, 0.42);
+    border: 1px solid rgba(148, 163, 184, 0.08);
+    transition: all 0.2s ease;
+}
+
+.activity-item:hover {
+    background: rgba(255, 255, 255, 0.025);
+    border-color: rgba(96, 165, 250, 0.25);
+    transform: translateX(2px);
+}
+
+.activity-icon-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.activity-icon-badge.task {
+    background: rgba(37, 99, 235, 0.15);
+    color: #60a5fa;
+    border: 1px solid rgba(96, 165, 250, 0.25);
+}
+
+.activity-icon-badge.completed {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.activity-icon-badge.progress {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.activity-icon-badge.user {
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.25);
+}
+
+.activity-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.activity-message {
+    color: #e2e8f0;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.activity-message strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.activity-time {
+    color: var(--tm-text-muted, #64748b);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.activity-meta-tag {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* Empty State */
+.activity-empty {
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--tm-text-secondary, #94a3b8);
+}
+
+.activity-empty-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
+}
+
+.activity-empty h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.activity-empty p {
+    margin: 0;
+    font-size: 14px;
+}
